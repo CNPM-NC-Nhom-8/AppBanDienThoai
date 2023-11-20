@@ -3,13 +3,15 @@ package com.example.appbandienthoai.Class;
 import java.io.Serializable;
 
 public class DienThoaiMoi implements Serializable {
-    String MASP, TENSP, PHANLOAI, NOINHAP, NOIDUNG;
-    Integer SOLUONG, HINHANH;
+    String MASP, TENSP, PHANLOAI, NOINHAP, NOIDUNG, HINHANH;
+    Integer SOLUONG;
     Long DONGIA;
 
 
-    public DienThoaiMoi(){ }
-    public DienThoaiMoi(String MASP, String TENSP, String PHANLOAI, Integer SOLUONG, String NOINHAP, String NOIDUNG, Long DONGIA, Integer HINHANH) {
+    public DienThoaiMoi() {
+    }
+
+    public DienThoaiMoi(String MASP, String TENSP, String PHANLOAI, Integer SOLUONG, String NOINHAP, String NOIDUNG, Long DONGIA, String HINHANH) {
         this.MASP = MASP;
         this.TENSP = TENSP;
         this.PHANLOAI = PHANLOAI;
@@ -69,11 +71,11 @@ public class DienThoaiMoi implements Serializable {
         this.SOLUONG = SOLUONG;
     }
 
-    public Integer getHINHANH() {
+    public String getHINHANH() {
         return HINHANH;
     }
 
-    public void setHINHANH(Integer HINHANH) {
+    public void setHINHANH(String HINHANH) {
         this.HINHANH = HINHANH;
     }
 

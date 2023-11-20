@@ -104,7 +104,7 @@ public class GioHangActivity extends AppCompatActivity {
             gioHang.setIdVoucher(cursor.getString(1));
             gioHang.setIdSanPham(cursor.getString(2));
             gioHang.setTenSP(cursor.getString(3));
-            gioHang.setHinhSanPham(cursor.getInt(4));
+            gioHang.setHinhSanPham(cursor.getString(4));
             gioHang.setIdCus(cursor.getString(5));
             gioHang.setDonGia(cursor.getLong(6));
             gioHang.setSoLuong(cursor.getInt(7));
@@ -115,7 +115,7 @@ public class GioHangActivity extends AppCompatActivity {
                 gioHang.setIdVoucher(cursor.getString(1));
                 gioHang.setIdSanPham(cursor.getString(2));
                 gioHang.setTenSP(cursor.getString(3));
-                gioHang.setHinhSanPham(cursor.getInt(4));
+                gioHang.setHinhSanPham(cursor.getString(4));
                 gioHang.setIdCus(cursor.getString(5));
                 gioHang.setDonGia(cursor.getLong(6));
                 gioHang.setSoLuong(cursor.getInt(7));

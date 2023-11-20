@@ -20,7 +20,7 @@ import com.example.appbandienthoai.R;
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class DienThoaiAdapter extends RecyclerView.Adapter<DienThoaiAdapter.MyViewHolder>{
+public class DienThoaiAdapter extends RecyclerView.Adapter<DienThoaiAdapter.MyViewHolder> {
     List<DienThoaiMoi> array;
     Context context;
 
@@ -32,7 +32,7 @@ public class DienThoaiAdapter extends RecyclerView.Adapter<DienThoaiAdapter.MyVi
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_sp_moi,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_sp_moi, parent, false);
         return new DienThoaiAdapter.MyViewHolder(view);
     }
 
@@ -42,11 +42,11 @@ public class DienThoaiAdapter extends RecyclerView.Adapter<DienThoaiAdapter.MyVi
 
         holder.tensp.setText(sanPhamMoi.getTENSP());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-        if (sanPhamMoi.getSOLUONG() <= 0){
+        if (sanPhamMoi.getSOLUONG() <= 0) {
             holder.giatien.setText("TẠM HẾT HÀNG");
             holder.giatien.setTextColor(Color.parseColor("#FF0000"));
         } else {
-            holder.giatien.setText("Giá: "+decimalFormat.format(Double.parseDouble(String.valueOf(sanPhamMoi.getDONGIA()))) + " VNĐ");
+            holder.giatien.setText("Giá: " + decimalFormat.format(Double.parseDouble(String.valueOf(sanPhamMoi.getDONGIA()))) + " VNĐ");
             holder.giatien.setTextColor(Color.parseColor("#000000"));
         }
         Glide.with(context).load(sanPhamMoi.getHINHANH()).into(holder.imgHinhanh);
@@ -54,7 +54,7 @@ public class DienThoaiAdapter extends RecyclerView.Adapter<DienThoaiAdapter.MyVi
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context, ChiTietSPActivity.class);
-                i.putExtra("chitiet",sanPhamMoi);
+                i.putExtra("chitiet", sanPhamMoi);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
@@ -69,6 +69,7 @@ public class DienThoaiAdapter extends RecyclerView.Adapter<DienThoaiAdapter.MyVi
     static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView giatien, tensp;
         ImageView imgHinhanh;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             giatien = itemView.findViewById(R.id.tvPrice);

@@ -101,7 +101,7 @@ public class DienThoaiActivity extends AppCompatActivity {
                                                                   listSanPham.getString(4),
                                                                   listSanPham.getString(5),
                                                                   listSanPham.getLong(6),
-                                                                  listSanPham.getInt(7)
+                                                                  ""
                                                           ));
                                                       }
                                                       //Cập nhật vào Adapter
@@ -130,7 +130,8 @@ public class DienThoaiActivity extends AppCompatActivity {
                                                                   listSanPham.getString(4),
                                                                   listSanPham.getString(5),
                                                                   listSanPham.getLong(6),
-                                                                  listSanPham.getInt(7)
+//                                                                  listSanPham.getInt(7)
+                                                                  ""
                                                           ));
                                                       }
                                                       //Cập nhật vào Adapter
@@ -155,7 +156,8 @@ public class DienThoaiActivity extends AppCompatActivity {
                     listSanPham.getString(4),
                     listSanPham.getString(5),
                     listSanPham.getLong(6),
-                    listSanPham.getInt(7)
+//                    listSanPham.getInt(7)
+                    ""
             ));
         }
         recyclerViewManHinhChinh = (RecyclerView) findViewById(R.id.listnewProduct);
@@ -225,7 +227,8 @@ public class DienThoaiActivity extends AppCompatActivity {
                     cursor.getString(4),
                     cursor.getString(5),
                     cursor.getLong(6),
-                    cursor.getInt(7)
+//                    cursor.getInt(7)
+                    ""
             );
             products.add(product);
         }

@@ -1,11 +1,12 @@
 package com.example.appbandienthoai;
 
 public class GioHang {
-    Integer soLuong, idCartList, hinhSanPham;
-    String idVoucher, idSanPham, idCus;
+    Integer soLuong, idCartList;
+    String idVoucher, idSanPham, idCus, hinhSanPham;
     double totalMoney, donGia;
     String tenSP;
-    public GioHang(Integer soLuong, Integer idCartList, String idVoucher, String idSanPham, String idCus, long donGia, String tenSP, Integer hinhSanPham) {
+
+    public GioHang(Integer soLuong, Integer idCartList, String idVoucher, String idSanPham, String idCus, long donGia, String tenSP, String hinhSanPham) {
         this.soLuong = soLuong;
         this.idCartList = idCartList;
         this.idVoucher = idVoucher;
@@ -15,17 +16,19 @@ public class GioHang {
         this.tenSP = tenSP;
         this.hinhSanPham = hinhSanPham;
     }
-    public GioHang(){}
+
+    public GioHang() {
+    }
 
     public Integer getSoLuong() {
         return soLuong;
     }
 
-    public Integer getHinhSanPham() {
+    public String getHinhSanPham() {
         return hinhSanPham;
     }
 
-    public void setHinhSanPham(Integer hinhSanPham) {
+    public void setHinhSanPham(String hinhSanPham) {
         this.hinhSanPham = hinhSanPham;
     }
 
